@@ -20,6 +20,10 @@ app.post('/', function(req, res) {
     res.send("<!DOCTYPE HTML>The result of the calculation is " + result)
 })
 
+app.get('/bmicalculator.html', function(req, res) {
+    res.sendFile(__dirname + "/bmicalculator.html")
+})
+
 app.listen(3000, function(){
     console.log(`Server is running on port 3000`);
 });
